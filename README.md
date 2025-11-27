@@ -14,10 +14,9 @@ To write a program to find the solution of a matrix using Gaussian Elimination.
  4. Then print the program with correct form then the output will display.
 
 ## Program:
-```python
-'''Program to solve a matrix using Gaussian elimination without partial pivoting.
-Developed by: HIRUTHIK SUDHAKAR
-RegisterNumber: 212223240054
+```
+Developed by: Nivash P
+RegisterNumber: 25015299
 '''
 import numpy as np
 import sys
@@ -26,16 +25,16 @@ a=np.zeros((n,n+1))
 x=np.zeros(n)
 for i in range(n):
     for j in range(n+1):
-        a[i][j]=float(input())
-for i in range(n):
+         a[i][j]=float(input())
+for i  in range(n):
     if a[i][j]==0:
-        sys.exit('Divide by zero detected!')
+       sys.exit('Divide by zero detected!')
     for j in range(i+1,n):
-        ratio=a[j][i]/a[i][i]
-        for k in range(n+1):
-            a[j][k]=a[j][k]-ratio*a[i][k]
+       ratio=a[j][i]/a[i][i]
+       for k in range(n+1):
+           a[j][k]=a[j][k]-ratio*a[i][k]
 x[n-1]=a[n-1][n]/a[n-1][n-1]
-for i in range (n-2,-1,-1):
+for i in range(n-2,-1,-1):
     x[i]=a[i][n]
     for j in range(i+1,n):
         x[i]=x[i]-a[i][j]*x[j]
@@ -45,7 +44,8 @@ for i in range(n):
 ```
 
 ## Output:
-![alt text](image.png)
+<img width="1298" height="822" alt="Screenshot 2025-11-27 104243" src="https://github.com/user-attachments/assets/0183187d-bb29-4144-9a14-441ed075fef2" />
+
 
 
 ## Result:
